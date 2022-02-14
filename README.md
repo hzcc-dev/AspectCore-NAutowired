@@ -2,7 +2,7 @@
 
 An extension library to integrate NAutowired and AspectCore framework into Asp.NET Core DI system.
 
-一个基于AspectCore.DependencyInjection的扩展库，使NAutowired可以和AspectCore一起使用。
+一个基于AspectCore.DependencyInjection的扩展库，使`NAutowired`可以和`AspectCore`一起使用。
 被代理的原始服务仍可以正常使用[Autowired]来将其它服务自动注入其字段。
 
 # 安装
@@ -50,12 +50,12 @@ public class FooService : IFooService
 public static IHostBuilder CreateHostBuilder(string[] args) =>
     Host.CreateDefaultBuilder(args)
         //省略其它
+        //启用AspectCore
         .UseServiceProviderFactory(new DynamicProxyServiceProviderFactory());
 ```
 
 ## 全局拦截
 
-```csharp
 ```csharp
 //Intercepter
 public class DefaultInterceptorAttribute : AbstractInterceptorAttribute
@@ -101,9 +101,12 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 public void ConfigureServices(IServiceCollection services)
 {
     services.ConfigureDynamicProxy(config => {
+        //拦截所有Execure开头的方法
         config.Interceptors.AddTyped<DefaultInterceptorAttribute>(Predicates.ForMethod("Execute*"));
 
+        //拦截所有Service结尾的服务内的方法
         config.Interceptors.AddTyped<CustomInterceptorAttribute>(Predicates.ForService("*Service"));
+
         //App1命名空间下的Service不会被代理
         config.NonAspectPredicates.AddNamespace("App1");
 
