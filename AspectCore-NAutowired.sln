@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspectCore.Extensions.DependencyInjection.NAutowired", "src\AspectCore.Extensions.DependencyInjection\AspectCore.Extensions.DependencyInjection.NAutowired.csproj", "{E11CC1DC-AE34-444D-8CD0-1281611CD183}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspectCore.Extensions.Hosting.NAutowired", "src\AspectCore.Extensions.Hosting\AspectCore.Extensions.Hosting.NAutowired.csproj", "{47847F71-8C1E-4A36-8447-FE4F73B23528}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E11CC1DC-AE34-444D-8CD0-1281611CD183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E11CC1DC-AE34-444D-8CD0-1281611CD183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E11CC1DC-AE34-444D-8CD0-1281611CD183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E11CC1DC-AE34-444D-8CD0-1281611CD183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47847F71-8C1E-4A36-8447-FE4F73B23528}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47847F71-8C1E-4A36-8447-FE4F73B23528}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47847F71-8C1E-4A36-8447-FE4F73B23528}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47847F71-8C1E-4A36-8447-FE4F73B23528}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3DC16064-7C76-4B59-899E-BA75D0E5CB46}
+	EndGlobalSection
+EndGlobal
