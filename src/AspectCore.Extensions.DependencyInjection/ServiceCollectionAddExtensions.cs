@@ -2,7 +2,7 @@
 using AspectCore.DynamicProxy;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspectCore.Extensions.DependencyInjection
+namespace AspectCore.Extensions.DependencyInjection.NAutowired
 {
     public static class ServiceCollectionAddExtensions
     {

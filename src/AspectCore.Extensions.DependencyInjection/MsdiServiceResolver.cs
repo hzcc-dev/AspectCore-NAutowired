@@ -1,7 +1,7 @@
 ﻿using System;
 using AspectCore.DependencyInjection;
 
-namespace AspectCore.Extensions.DependencyInjection
+namespace AspectCore.Extensions.DependencyInjection.NAutowired
 {
     internal class MsdiServiceResolver : IServiceResolver
     {

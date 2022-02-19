@@ -4,7 +4,7 @@ using AspectCore.DynamicProxy;
 using AspectCore.Extensions.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspectCore.Extensions.DependencyInjection
+namespace AspectCore.Extensions.DependencyInjection.NAutowired
 {
     internal class ServiceValidator
     {

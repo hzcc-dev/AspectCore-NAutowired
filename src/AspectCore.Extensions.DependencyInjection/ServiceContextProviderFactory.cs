@@ -3,7 +3,7 @@ using AspectCore.DynamicProxy;
 using AspectCore.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspectCore.Extensions.DependencyInjection
+namespace AspectCore.Extensions.DependencyInjection.NAutowired
 {
     [NonAspect]
     public class ServiceContextProviderFactory : IServiceProviderFactory<IServiceContext>

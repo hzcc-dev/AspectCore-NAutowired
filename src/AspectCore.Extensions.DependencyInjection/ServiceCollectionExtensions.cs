@@ -7,7 +7,7 @@ using AspectCore.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
-namespace AspectCore.Extensions.DependencyInjection
+namespace AspectCore.Extensions.DependencyInjection.NAutowired
 {
     public static class ServiceCollectionExtensions
     {

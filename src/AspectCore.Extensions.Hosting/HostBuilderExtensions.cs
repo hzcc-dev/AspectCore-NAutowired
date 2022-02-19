@@ -1,11 +1,11 @@
 ﻿using System;
 using AspectCore.Configuration;
-using AspectCore.Extensions.DependencyInjection;
+using AspectCore.Extensions.DependencyInjection.NAutowired;
 using AspectCore.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace AspectCore.Extensions.Hosting
+namespace AspectCore.Extensions.Hosting.NAutowired
 {
     public static class HostBuilderExtensions
     {

@@ -2,7 +2,7 @@
 using AspectCore.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspectCore.Extensions.DependencyInjection
+namespace AspectCore.Extensions.DependencyInjection.NAutowired
 {
     internal class MsdiScopeResolverFactory : IScopeResolverFactory
     {

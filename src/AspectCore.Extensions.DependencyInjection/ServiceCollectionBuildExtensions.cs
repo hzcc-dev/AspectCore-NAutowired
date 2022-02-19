@@ -9,8 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Collections.Generic;
 using System.Linq;
+using NAC = NAutowired.Core;
 
-namespace AspectCore.Extensions.DependencyInjection
+namespace AspectCore.Extensions.DependencyInjection.NAutowired
 {
     public static class ServiceCollectionBuildExtensions
     {
@@ -109,7 +110,7 @@ namespace AspectCore.Extensions.DependencyInjection
                 {
                     var aspectActivatorFactory = provider.GetRequiredService<IAspectActivatorFactory>();
                     var instance = ActivatorUtilities.CreateInstance(provider, implementationType);
-                    NAutowired.Core.DependencyInjection.Resolve(provider, instance);
+                    NAC.DependencyInjection.Resolve(provider, instance);
                     return reflector.Invoke(aspectActivatorFactory, instance);
                 };
             }
