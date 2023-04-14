@@ -17,7 +17,15 @@
     <Authors>Softworm</Authors>
     <RepositoryUrl>https://github.com/hzcc-dev/AspectCore-NAutowired</RepositoryUrl>
     <PackageProjectUrl>https://github.com/hzcc-dev/AspectCore-NAutowired</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="AspectCore.Core" Version="2.3.0" />
