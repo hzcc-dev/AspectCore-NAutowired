@@ -2,11 +2,11 @@
 
 An extension library to integrate NAutowired and AspectCore framework into Asp.NET Core DI system.
 
-一个基于AspectCore.DependencyInjection的扩展库，使`NAutowired`可以和`AspectCore`一起使用。
-被代理的原始服务仍可以正常使用[Autowired]来将其它服务自动注入其字段。
+一个基于AspectCore.DependencyInjection的扩展库，使[`NAutowired`](https://github.com/kirov-opensource/NAutowired)可以和[`AspectCore`](https://github.com/dotnetcore/AspectCore-Framework)一起使用。
+这样被代理的原始服务仍可以正常使用`[Autowired]`实现属性注入。
 
 # 安装
-```Install-Package AspectCore.Extensions.Hosting.NAutowired```
+```Install-Package AspectCore.Extensions.DependencyInjection.NAutowired```
 
 # 示例
 鉴于AspectCore文档较老，这里示例一下如何在.NET Core 5.0中使用AspectCore。
@@ -128,3 +128,6 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
+## 完整示例
+
+请参看[`TestConsoleApp`](./TestConsoleApp/Program.cs)示例项目。
