@@ -67,16 +67,18 @@ namespace AspectCore.Extensions.DependencyInjection.NAutowired
             var serviceTypeInfo = descriptor.ServiceType.GetTypeInfo();
             if (serviceTypeInfo.IsClass)
             {
+                var proxyType = proxyTypeGenerator.CreateClassProxyType(descriptor.ServiceType, implementationType);
                 return ServiceDescriptor.Describe(
                     descriptor.ServiceType,
-                    proxyTypeGenerator.CreateClassProxyType(descriptor.ServiceType, implementationType),
+                    CreateFactoryWhenClass(descriptor, proxyType),
                     descriptor.Lifetime);
             }
             else if (serviceTypeInfo.IsGenericTypeDefinition)
             {
+                var proxyType = proxyTypeGenerator.CreateClassProxyType(implementationType, implementationType);
                 return ServiceDescriptor.Describe(
                     descriptor.ServiceType,
-                    proxyTypeGenerator.CreateClassProxyType(implementationType, implementationType),
+                    CreateFactoryWhenClass(descriptor, proxyType),
                     descriptor.Lifetime);
             }
             else
@@ -114,6 +116,16 @@ namespace AspectCore.Extensions.DependencyInjection.NAutowired
                     return reflector.Invoke(aspectActivatorFactory, instance);
                 };
             }
+        }
+
+        private static Func<IServiceProvider, object> CreateFactoryWhenClass(ServiceDescriptor descriptor, Type proxyType)
+        {
+            return provider =>
+            {
+                var instance = ActivatorUtilities.CreateInstance(provider, proxyType);
+                NAC.DependencyInjection.Resolve(provider, instance);
+                return instance;
+            };
         }
     }
 }
